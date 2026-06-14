@@ -37,10 +37,10 @@ jobs:
       run:
         working-directory: environments/dev
     env:
-      ARM_CLIENT_ID: ${{ secrets.DEV_ARM_CLIENT_ID }}
-      ARM_CLIENT_SECRET: ${{ secrets.DEV_ARM_CLIENT_SECRET }}
-      ARM_SUBSCRIPTION_ID: ${{ secrets.DEV_ARM_SUBSCRIPTION_ID }}
-      ARM_TENANT_ID: ${{ secrets.DEV_ARM_TENANT_ID }}
+      ARM_CLIENT_ID: ${{ secrets.DEV_AZURE_CLIENT_ID }}
+      ARM_CLIENT_SECRET: ${{ secrets.DEV_AZURE_CLIENT_SECRET }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.DEV_AZURE_SUBSCRIPTION_ID }}
+      ARM_TENANT_ID: ${{ secrets.DEV_AZURE_TENANT_ID }}
 
     steps:
       - name: Checkout code
@@ -77,10 +77,10 @@ jobs:
       run:
         working-directory: environments/prod
     env:
-      ARM_CLIENT_ID: ${{ secrets.PROD_ARM_CLIENT_ID }}
-      ARM_CLIENT_SECRET: ${{ secrets.PROD_ARM_CLIENT_SECRET }}
-      ARM_SUBSCRIPTION_ID: ${{ secrets.PROD_ARM_SUBSCRIPTION_ID }}
-      ARM_TENANT_ID: ${{ secrets.PROD_ARM_TENANT_ID }}
+      ARM_CLIENT_ID: ${{ secrets.PROD_AZURE_CLIENT_ID }}
+      ARM_CLIENT_SECRET: ${{ secrets.PROD_AZURE_CLIENT_SECRET }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.PROD_AZURE_SUBSCRIPTION_ID }}
+      ARM_TENANT_ID: ${{ secrets.PROD_AZURE_TENANT_ID }}
 
     steps:
       - name: Checkout code
