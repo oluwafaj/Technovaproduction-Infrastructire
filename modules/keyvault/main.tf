@@ -6,6 +6,7 @@ resource "azurerm_key_vault" "technova-kv" {
   sku_name                   = var.sku_name
   soft_delete_retention_days = 90
   tags                       = var.tags
+  enable_rbac_authorization  = true
 
   access_policy {
     tenant_id = var.tenant_id
