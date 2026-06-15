@@ -81,3 +81,7 @@ module "monitoring" {
   storage_capacity_threshold_bytes = 4294967296
   tags                             = local.common_tags
 }
+
+module "defender" {
+  source = "../../modules/defender"
+}
