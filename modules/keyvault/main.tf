@@ -7,17 +7,6 @@ resource "azurerm_key_vault" "technova-kv" {
   soft_delete_retention_days = 90
   tags                       = var.tags
   enable_rbac_authorization  = true
-
-  access_policy {
-    tenant_id = var.tenant_id
-    object_id = var.object_id
-    secret_permissions = [
-      "Get",
-      "List",
-      "Set",
-      "Delete"
-    ]
-  }
 }
 
 resource "random_password" "vm-admin-password" {
